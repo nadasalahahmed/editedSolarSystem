@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Hole Theory</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-size: 10px;
+            background: rgb(60, 88, 116);
+            color: #eee;
+            font-family: sans-serif;
+            transition: background 0.5s ease-in;
+        }
+        
+        .hero {
+            background: url('https://cf-img-a-in.tosshub.com/sites/visualstory/wp/2025/03/blackhole-2ITG-1741951763084.jpg?size=*:900') no-repeat;
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: overlay;
+            color: white;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30rem 0rem;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px black;
+        }
+
+        .hero p {
+            font-size: 2rem;
+        }
+
+
+        .h-Font-Size {
+            font-size: 3rem;
+        }
+
+        .p-Font-Size {
+            font-size: 2rem;
+        }
+
+        .card-Font-Size {
+            font-size: 1.5rem;
+        }
+
+        .text-Shadow {
+            text-shadow: 2px 2px 8px black;
+        }
+
+        nav {
+            position: fixed;
+            height: 7rem;
+            top: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgba(10, 10, 40, 0.9);
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logoSection {
+            display: flex;
+            justify-content: space-around;
+            gap: 90rem;
+            align-items: center;
+        }
+
+        .gap {
+                gap: 15rem;
+            }
+
+        .logo {
+            color: #fff;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .toggle-container {
+            width: 3rem;
+            height: 3rem;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .toggle-ball img {
+            width: 3rem;
+            border-radius: 50%;
+            margin-top: 0rem;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2rem;
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .nav-links.show {
+            display: flex;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            font-size: 1.8rem;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: rgba(10, 10, 40, 0.9);
+            min-width: 16rem;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 1.2rem 1.6rem;
+            text-decoration: none;
+            display: block;
+            font-size: 1.6rem;
+        }
+
+        .dropdown-content a:hover {
+            background: #5ba2f8;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+
+
+
+
+
+
+
+        @media (min-width:700.99px) and (max-width:1000px) {
+            .logoSection {
+                gap: 50rem;
+            }
+
+            .gap {
+                gap: 1rem;
+            }
+
+        }
+
+        @media screen and (max-width:700px) {
+          
+
+            .nav-links.show {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+            .SmallHeight {
+                gap: 1rem;
+                height: 25rem;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            nav .nav-links.corner {
+                display: grid;
+                grid-template-columns: repeat(3, 30%);
+                gap: 4rem;
+                margin-right: 5rem;
+            }
+
+            .logoSection {
+                gap: 19rem;
+            }
+
+            .gap {
+                gap: 19rem;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="col-12 col-md-12 col-sm-12" id="nav">
+        <div class="logoSection" id="logoSection">
+            <button class="logo" id="menu-toggle">Space Crew</button>
+            <div class="toggle-container" onclick="toggleSwitch()">
+                <div class="toggle-ball">
+                    <img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" id="ball" alt="Theme Icon">
+                </div>
+            </div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="page1.html">Home</a></li>
+            <li><a href="#first">About</a></li>
+            <li><a href="#planets">Planets</a></li>
+            <li class="link4"><a href="#developers">Developers</a></li>
+            <li class="dropdown">
+                <a href="page2.html" class="dropbtn">Galaxies</a>
+                <div class="dropdown-content">
+                    <a href="page2.html">Milky Way</a>
+                    <a href="page2.html">Andromeda</a>
+                    <a href="page2.html">Triangulum</a>
+                </div>
+            </li>
+            <li class="link5"><a href="signin.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="first">
+        <div>
+            <h1>The Mystery of Black Holes</h1>
+            <p class="lead">Where gravity is so strong that even light cannot escape</p>
+            <a href="#overview" class="btn btn-light btn-lg mt-5 p-4 fs-3">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="container py-5" id="overview">
+        <div class="text-center mb-5">
+            <h2 class="h-Font-Size fw-bolder text-Shadow">Overview</h2>
+            <p class="p-Font-Size text-Shadow">An introduction to the science behind black holes</p>
+        </div>
+        <div class="row">
+            <div id="aside" class="col-md-6 fs-3 mt-5">
+                <p class=" p-Font-Size">Black holes are regions in space where gravity is so intense that nothing, not even light, can escape
+                    their pull. They are formed when massive stars collapse under their own gravity at the end of their
+                    life cycle.</p>
+                <p class="p-Font-Size" >Albert Einstein’s theory of general relativity predicted the existence of black holes in 1915. Today,
+                    astronomers use telescopes and detectors to study these fascinating cosmic objects.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="https://www.advancedsciencenews.com/wp-content/uploads/2025/01/black-hole-7274093_1280.jpg"
+                    class="img-fluid rounded shadow" alt="Black Hole Illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Types Section -->
+    <section class="bg-dark.bg-gradient py-5" id="types">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h-Font-Size fw-bolder text-Shadow">Types of Black Holes</h2>
+                <p class="p-Font-Size text-Shadow">Different categories based on their mass and origin</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title p-Font-Size fw-bolder">Stellar Black Holes</h5>
+                            <p class="card-text card-Font-Size">Formed by the gravitational collapse of massive stars. Typically have
+                                masses up to 20 times that of the Sun.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title p-Font-Size fw-bolder">Supermassive Black Holes</h5>
+                            <p class="card-text card-Font-Size">Found at the centers of galaxies, including the Milky Way. They can
+                                have millions or billions of solar masses.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title p-Font-Size fw-bolder">Intermediate Black Holes</h5>
+                            <p class="card-text card-Font-Size">A rare class with masses between stellar and supermassive black holes.
+                                They may form from star cluster collisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="container py-5" id="gallery">
+        <div class="text-center mb-5">
+            <h2 class="h-Font-Size fw-bolder text-Shadow">Gallery</h2>
+            <p class="p-Font-Size text-Shadow">Visualizing the invisible</p>
+        </div>
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active d-flex justify-content-center">
+                    <img src="https://www.advancedsciencenews.com/wp-content/uploads/2025/01/black-hole-7274093_1280.jpghttps://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/potw2026a.jpg"
+                        class="d-block w-50 rounded" alt="Black Hole 1">
+                </div>
+                <div class="carousel-item d-flex justify-content-center">
+                    <img src="https://img.turkiyetoday.com/images/2025/03/AdobeStock_70028919.jpeg"
+                        class="d-block w-50 rounded" alt="Black Hole 2">
+                </div>
+                <div class="carousel-item d-flex justify-content-center">
+                    <img src="https://img.turkiyetoday.com/images/2025/03/AdobeStock_70028919.jpeg"
+                        class="d-block w-50 rounded" alt="Black Hole 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="container py-5" id="faq">
+        <div class="text-center mb-5">
+            <h2 class="h-Font-Size fw-bolder text-Shadow">Frequently Asked Questions</h2>
+        </div>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="q1">
+                    <button class="accordion-button p-Font-Size fw-bolder" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+                        Can we see black holes directly?
+                    </button>
+                </h2>
+                <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body card-Font-Size">No, because not even light escapes. We observe them through their
+                        effects on nearby stars and gas, or via gravitational waves.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="q2">
+                    <button class="accordion-button collapsed p-Font-Size fw-bolder" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#a2">
+                        What happens if you fall into a black hole?
+                    </button>
+                </h2>
+                <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body card-Font-Size">The extreme gravity would stretch objects vertically and compress them
+                        horizontally, a process called “spaghettification.”</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+                var navigation = document.getElementById("nav");
+        var logo = document.getElementById("logoSection");
+        var menuToggle = document.getElementById("menu-toggle");
+        var links = document.getElementById("nav-links");
+        menuToggle.addEventListener("click", function () {
+            links.classList.toggle("show");
+            if (links.classList.contains("show")) {
+                navigation.classList.add("SmallHeight");
+                links.classList.add("corner");
+                logo.classList.add("gap");
+            } else {
+                navigation.classList.remove("SmallHeight");
+                links.classList.remove("corner");
+                logo.classList.remove("gap");
+            }
+        });
+
+        function toggleSwitch() {
+            var ball = document.getElementById('ball');
+            ball.classList.toggle('active');
+            if (ball.classList.contains("active")) {
+                document.body.style.backgroundColor = "rgb(60,88,116)";
+                ball.src = "https://cdn-icons-png.flaticon.com/128/869/869869.png";
+            } else {
+                document.body.style.backgroundColor = "black";
+                ball.src = "https://cdn-icons-png.flaticon.com/128/1823/1823397.png";
+                document.body.style.color = "white";
+            }
+        }
+    </script>
+</body>
+
+</html>
